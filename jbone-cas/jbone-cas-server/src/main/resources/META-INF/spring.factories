@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.apereo.cas.config.RedisSessionConfiguration,\
+  org.apereo.cas.config.RedisCacheConfiguration,\
+  org.apereo.cas.config.TomcatConfiguration

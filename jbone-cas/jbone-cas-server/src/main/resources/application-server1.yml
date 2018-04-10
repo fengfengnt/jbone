@@ -1,0 +1,13 @@
+serivcename: http://localhost:8443 #https://jbone-cas.majunwei.com:8443
+server:
+  port: 8443
+cas:
+  server:
+    name: {serivcename}
+    prefix: ${serivcename}/cas
+logging:
+  config: classpath:log4j2_server1.xml
+spring.boot.admin.client:
+  management-base-url: ${serivcename}/cas
+  management-url: ${spring.boot.admin.client.management-base-url}
+  service-url: ${spring.boot.admin.client.management-base-url}

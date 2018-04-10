@@ -5,8 +5,10 @@ spring:
     host: 192.168.100.100
     port: 6379
     password: jbone
-server:
-  port: 10002
+  profiles:
+    active: server1
+#server:
+#  port: 10002
 
 #注册中心
 eureka:
@@ -14,7 +16,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:10001/eureka
+      defaultZone: http://localhost:10001/eureka,http://localhost:10101/eureka
     metadata-map:
       user.name: jbone
       user.password: jbone
@@ -37,7 +39,7 @@ management:
 #CAS服务地址
 jbone:
   cas:
-    casServerUrl: https://jbone-cas.majunwei.com:8443/cas
+    casServerUrl: http://192.168.100.100:10080/cas # http://localhost:8443/cas #http://localhost:18443/cas/cas #https://jbone-cas.majunwei.com:8445/cas #https://jbone-cas.majunwei.com:8443/cas
     #当前系统地址
     currentServerUrlPrefix: http://jbone-sm-admin.majunwei.com:10002
     #过滤器地址,CAS认证通过后会回掉到jbone.cas.currentServerUrlPrefix/jbone.cas.casFilterUrlPattern

@@ -26,7 +26,7 @@ management.add-application-context-header=false
 security.basic.authorize-mode=role
 security.basic.enabled=false
 security.basic.path=/cas/status/**
-logging.config=classpath:log4j2.xml
+#logging.config=classpath:log4j2.xml
 
 eureka.client.service-url.defaultZone=http://localhost:10001/eureka/
 ribbon.ConnectTimeout=500
