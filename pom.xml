@@ -19,6 +19,7 @@
         <module>jbone-ui</module>
         <module>jbone-tag</module>
         <module>jbone-gateway</module>
+        <module>jbone-session</module>
     </modules>
     <packaging>pom</packaging>
 
